@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/home', function () {
+//     return view('welcome');
+// });
+// Route::view('/jogos.blade','jogos');
+// Route::get('/jogos', function(){
+//     return "curso de laravel do gustavo";
+// });
+// Route::views('/jogos', 'jogos',['name'=> 'GTA']);
+Route::get('/jogos/{name}', function($name){
+    return view('jogos', ['nomeJogo'=>$name]);
 });
