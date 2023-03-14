@@ -24,3 +24,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/jogos/{name}', function($name){
     return view('jogos', ['nomeJogo'=>$name]);
 });
+Route::get('/produto/{produto}', [ProdutoController::class, 'show']);
